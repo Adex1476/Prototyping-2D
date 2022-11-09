@@ -7,24 +7,28 @@ public class MovementManager : MonoBehaviour
     public PlayerAutoMovement pam;
     public PlayerMovement pm;
     public Mov m;
+    public int mode;
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() 
+    {
+        mode = PlayerPrefs.GetInt("Mode");
+    }
 
     // Update is called once per frame
     void Update()
     {
         if ( pm == null && pam == null)
         {
-            if (Input.GetKey(KeyCode.A))
-            {
-                gameObject.AddComponent<AnimationMovement>();
-                pam = gameObject.AddComponent<PlayerAutoMovement>();
-            } 
-            else if (Input.GetKey(KeyCode.M))
+            if (mode == 1)
             {
                 gameObject.AddComponent<AnimationMovement>();
                 pm = gameObject.AddComponent<PlayerMovement>();
+            } 
+            else if (mode == 2)
+            {
+                gameObject.AddComponent<AnimationMovement>();
+                pam = gameObject.AddComponent<PlayerAutoMovement>();
             }
         } 
     }

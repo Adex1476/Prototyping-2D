@@ -9,6 +9,7 @@ public class ChangeScene : MonoBehaviour
     public static string playerName;
     private Button button;
     public InputField inpf;
+    public Dropdown dp;
     private bool created = false;
 
     void Awake()
