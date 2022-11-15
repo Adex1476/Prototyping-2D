@@ -63,7 +63,7 @@ public class PowerUp : MonoBehaviour
     }
     void baseF()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) { currentStatus = PUstatus.grow; }
+        if (Input.GetKeyDown(KeyCode.P)) { currentStatus = PUstatus.grow; }
     }
     void grow()
     {
