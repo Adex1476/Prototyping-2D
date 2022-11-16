@@ -32,6 +32,5 @@ public class MovementManager : MonoBehaviour
             }
         } 
     }
-
     public enum Mov { Movement, Stop }
 }
