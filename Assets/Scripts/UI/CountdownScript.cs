@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CountdownScript : MonoBehaviour
@@ -9,13 +9,13 @@ public class CountdownScript : MonoBehaviour
     public float timeRemaining;
     public bool timerIsRunning;
     public bool finishGame;
-    [SerializeField] private TextMeshPro _timeText;
+    [SerializeField] private Text _timeText;
 
     // Start is called before the first frame update
     void Start()
     {
         timerIsRunning = true;
-        timeRemaining = 10;
+        timeRemaining = 60;
         finishGame = false;
     }
 

@@ -468,7 +468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea241abbf868b8640b450f11de5af907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 
 --- !u!1 &386126803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,8 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0417a07c69cf4c4eb3505ad8ebc47eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inpf: {fileID: 1320093329}
-  dp: {fileID: 0}
+  _inpf: {fileID: 1320093329}
 --- !u!1 &1640792969
 GameObject:
   m_ObjectHideFlags: 0
