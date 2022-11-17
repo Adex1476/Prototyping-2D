@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ebccabbe1c222914fa87cd42c575e41f
+=======
+guid: 42a4c5b939ec3744ba61253542d380ca
+>>>>>>> dev
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,6 +106,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< HEAD
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,6 +131,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+=======
+>>>>>>> dev
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -137,6 +144,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: tvOS
     maxTextureSize: 2048
@@ -149,6 +157,8 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> dev
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -157,9 +167,15 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 612
+<<<<<<< HEAD
         y: 120
         width: 215
         height: 200
+=======
+        y: 121
+        width: 215
+        height: 201
+>>>>>>> dev
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +183,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 462caaa258666fb4782e7ace12a72871
       internalID: -630241613
+=======
+      spriteID: 40f43a22672258849be85a726ca7a0db
+      internalID: -2119612991
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -188,8 +209,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 6ff75a7a0649a5f47aeb06b8143ecfe3
       internalID: 2116983916
+=======
+      spriteID: 8fdc91542d17c7f42bbb8530fd864efc
+      internalID: -1000840593
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -198,9 +224,15 @@ TextureImporter:
       name: Mesa de trabajo 2_3
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 1241
         y: 111
         width: 255
+=======
+        x: 1238
+        y: 111
+        width: 258
+>>>>>>> dev
         height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -209,8 +241,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 09e583122db86de49b669aba38458081
       internalID: 547131332
+=======
+      spriteID: 9fcbaa01403126b4da72c93bd9d2c4a3
+      internalID: 1815607325
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -220,9 +257,15 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1617
+<<<<<<< HEAD
         y: 130
         width: 218
         height: 200
+=======
+        y: 132
+        width: 217
+        height: 198
+>>>>>>> dev
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,8 +273,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 9650ca39610f9f34fa4b54e45d8dbb07
       internalID: 400215037
+=======
+      spriteID: 751b6bba15ffb6046a28a7497d00db4c
+      internalID: -17834477
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -240,10 +288,17 @@ TextureImporter:
       name: Mesa de trabajo 2_5
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 1893
         y: 129
         width: 205
         height: 208
+=======
+        x: 1896
+        y: 128
+        width: 201
+        height: 209
+>>>>>>> dev
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,8 +306,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 80f1a3d43ef6b69479592ae4d6fc12e3
       internalID: -1010253739
+=======
+      spriteID: f3581c89a3512d344922cf253b125204
+      internalID: -204843938
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -261,10 +321,17 @@ TextureImporter:
       name: Mesa de trabajo 2_6
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 350
         y: 125
         width: 187
         height: 174
+=======
+        x: 352
+        y: 127
+        width: 187
+        height: 172
+>>>>>>> dev
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,8 +339,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 150fa63fae1bcce4eb5baf8fdd6a4548
       internalID: 197233132
+=======
+      spriteID: 8a8de074a4c72b2479315bd9158d3330
+      internalID: -644845000
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -282,9 +354,15 @@ TextureImporter:
       name: Mesa de trabajo 2_16
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 152
         y: 155
         width: 112
+=======
+        x: 153
+        y: 155
+        width: 109
+>>>>>>> dev
         height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -293,8 +371,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 37ef0a56693871b4993c73252c5d07a6
       internalID: -369154042
+=======
+      spriteID: 1b769ee303e5901499756434df95ff76
+      internalID: 1143505101
+>>>>>>> dev
       vertices: []
       indices: 
       edges: []
@@ -310,6 +393,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Mesa de trabajo 2_34: -1619245211
       Mesa de trabajo 2_10: -250706736
       Mesa de trabajo 2_31: 1748318520
@@ -347,6 +431,45 @@ TextureImporter:
       Mesa de trabajo 2_5: -1010253739
       Mesa de trabajo 2_28: 1871604772
       Mesa de trabajo 2_36: -1608299635
+=======
+      Mesa de trabajo 2_34: -429578981
+      Mesa de trabajo 2_10: -1222898332
+      Mesa de trabajo 2_31: 831654283
+      Mesa de trabajo 2_18: -865131
+      Mesa de trabajo 2_11: 823615541
+      Mesa de trabajo 2_29: 1012971888
+      Mesa de trabajo 2_14: 535413078
+      Mesa de trabajo 2_20: 869676510
+      Mesa de trabajo 2_33: 605977651
+      Mesa de trabajo 2_9: -900629213
+      Mesa de trabajo 2_16: 1143505101
+      Mesa de trabajo 2_22: 1828185881
+      Mesa de trabajo 2_4: -17834477
+      Mesa de trabajo 2_13: -1942566653
+      Mesa de trabajo 2_23: 256066338
+      Mesa de trabajo 2_27: 1197809679
+      Mesa de trabajo 2_35: -1964977181
+      Mesa de trabajo 2_24: 171988967
+      Mesa de trabajo 2_15: -443912288
+      Mesa de trabajo 2_6: -644845000
+      Mesa de trabajo 2_2: 2103671588
+      Mesa de trabajo 2_0: -2119612991
+      Mesa de trabajo 2_8: -87492149
+      Mesa de trabajo 2_26: -579657441
+      Mesa de trabajo 2_21: -167007995
+      Mesa de trabajo 2_25: 1524095733
+      Mesa de trabajo 2_3: 1815607325
+      Mesa de trabajo 2_30: -210574662
+      Mesa de trabajo 2_7: 1421323050
+      Mesa de trabajo 2_17: 1249429966
+      Mesa de trabajo 2_32: -381499664
+      Mesa de trabajo 2_1: -1000840593
+      Mesa de trabajo 2_19: 657865772
+      Mesa de trabajo 2_12: -1914791633
+      Mesa de trabajo 2_5: -204843938
+      Mesa de trabajo 2_28: 1940602383
+      Mesa de trabajo 2_36: -734793500
+>>>>>>> dev
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
