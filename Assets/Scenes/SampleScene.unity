@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 679142017}
   - component: {fileID: 679142019}
   - component: {fileID: 679142018}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 904666377}
   - component: {fileID: 904666379}
   - component: {fileID: 904666378}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PlayerKind
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,17 +13,15 @@ public class FireballSpawner : MonoBehaviour
     {
         y = 5f;
         x = 10f;
-        InvokeRepeating("Spawn", 0.5f, 0.5f);
+        InvokeRepeating("Spawn", 0.3f, 0.5f);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
     void Spawn()
     {
         Instantiate(_fireball, rdmFbSpawn(), Quaternion.identity);
+        transform.position = rdmFbSpawn();
     }
-    Vector3 rdmFbSpawn() { return new Vector3(Random.Range(-x, x), y, transform.position.z); }
+    Vector2 rdmFbSpawn() { return new Vector2(Random.Range(-x, x), y); }
 }
