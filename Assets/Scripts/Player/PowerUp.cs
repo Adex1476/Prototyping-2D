@@ -52,19 +52,26 @@ public class PowerUp : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Egg"))
+        {
+            currentStatus = PUstatus.grow;
+        }
+    }
+
     void cd()
     {
         if (cdTime > 0) { cdTime -= Time.deltaTime; }
         else
         {
-            cdTime = 6f;
+            cdTime = 0f;
             currentStatus = PUstatus.baseF;
         }
     }
-    void baseF()
-    {
-        if (Input.GetKeyDown(KeyCode.P)) { currentStatus = PUstatus.grow; }
-    }
+
+    void baseF() {}
+
     void grow()
     {
         increase = true;
@@ -78,15 +85,17 @@ public class PowerUp : MonoBehaviour
             }
         }
     }
+
     void giant()
     {
         if (PUtime > 0) { PUtime -= Time.deltaTime; }
         else
         {
-            PUtime = 6f;
+            PUtime = 3f;
             currentStatus = PUstatus.ungrow;
         }
     }
+
     void ungrow()
     {
         decrease = true;

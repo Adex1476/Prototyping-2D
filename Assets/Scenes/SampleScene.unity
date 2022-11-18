@@ -1205,6 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fireball: {fileID: 3629307040425859125, guid: 56e017c465b6c82479e7f2d5b47f0e62, type: 3}
+  _egg: {fileID: 4416322329346944720, guid: 56b6b52027cc2a34a801436c2c0b68a8, type: 3}
 --- !u!1 &904666376
 GameObject:
   m_ObjectHideFlags: 0

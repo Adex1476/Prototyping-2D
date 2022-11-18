@@ -11,7 +11,7 @@ public class ResultUI : MonoBehaviour
     [SerializeField] private GameObject _resultWText;
     [SerializeField] private GameObject _resultLText;
     [SerializeField] private GameObject _fireballsText;
-    [SerializeField]private Button _paButton;
+    [SerializeField] private Button _paButton;
     [SerializeField] private Button _menuButton;
 
     // Start is called before the first frame update
