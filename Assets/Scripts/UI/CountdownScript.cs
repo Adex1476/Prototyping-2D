@@ -15,7 +15,7 @@ public class CountdownScript : MonoBehaviour
     void Start()
     {
         timerIsRunning = true;
-        timeRemaining = 60;
+        timeRemaining = 10;
         finishGame = false;
     }
 
@@ -39,7 +39,8 @@ public class CountdownScript : MonoBehaviour
 
         if (finishGame)
         {
-            SceneManager.LoadScene("StartScene");
+            PlayerPrefs.SetInt("Result", 1);
+            SceneManager.LoadScene("GameOverScene");
         }
 
         void DisplayTime(float timeToDisplay)
