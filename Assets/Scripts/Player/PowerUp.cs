@@ -13,6 +13,7 @@ public class PowerUp : MonoBehaviour
     bool increase = false, decrease = false;
     private float Scale;
     private Vector3 Vector = new Vector3(1, 1, 1);
+    private bool cantGrow;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PowerUp : MonoBehaviour
         Scale = dataPlayer.Height / 10;
         maxSize = Size + Vector * Scale;
         currentStatus = PUstatus.baseF;
+        cantGrow = false;
     }
 
     // Update is called once per frame
@@ -56,7 +58,10 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.CompareTag("Egg"))
         {
-            currentStatus = PUstatus.grow;
+            if (cantGrow == false)
+            {
+                currentStatus = PUstatus.grow;
+            }
         }
     }
 
@@ -66,6 +71,7 @@ public class PowerUp : MonoBehaviour
         else
         {
             cdTime = 0f;
+            cantGrow = false;
             currentStatus = PUstatus.baseF;
         }
     }
@@ -75,6 +81,7 @@ public class PowerUp : MonoBehaviour
     void grow()
     {
         increase = true;
+        cantGrow = true;
         if (increase)
         {
             transform.localScale += Vector;

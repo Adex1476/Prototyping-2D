@@ -15,7 +15,7 @@ public class CountdownScript : MonoBehaviour
     void Start()
     {
         timerIsRunning = true;
-        timeRemaining = 10;
+        timeRemaining = 30;
         finishGame = false;
     }
 
