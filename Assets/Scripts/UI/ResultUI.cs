@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class ResultUI : MonoBehaviour
 {
     [SerializeField] private Text _nameText;
+    [SerializeField] private Text _fcountText;
+    private float _fbs;
     private string _pd;
+    private int _mode;
     [SerializeField] private GameObject _resultWText;
     [SerializeField] private GameObject _resultLText;
     [SerializeField] private GameObject _fireballsText;
@@ -17,32 +20,33 @@ public class ResultUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _fbs = 0;
         _pd = PlayerPrefs.GetString("PlayerName");
+        _mode = PlayerPrefs.GetInt("Mode");
         _paButton.onClick.AddListener(GoToGame);
         _menuButton.onClick.AddListener(GoToMenu);
         Result();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() {}
 
     private void Result()
     {
+        _fbs = PlayerPrefs.GetFloat("FireballCont");
         if (PlayerPrefs.GetInt("Result") == 1)
         {
             _nameText.text = "Congrats, " + _pd;
             _resultWText.SetActive(true);
             _resultLText.SetActive(false);
-            if (PlayerPrefs.GetInt("Mode") == 1)
+            if (_mode == 1)
             {
                 _fireballsText.SetActive(false);
             }
-            else if (PlayerPrefs.GetInt("Mode") == 2)
+            else if (_mode == 2)
             {
                 _fireballsText.SetActive(true);
+                _fcountText.text = "Casted fireballs: " + _fbs;
             }
         }
         else if (PlayerPrefs.GetInt("Result") == 2)
@@ -50,13 +54,14 @@ public class ResultUI : MonoBehaviour
             _nameText.text = "What a bad luck... " + _pd;
             _resultWText.SetActive(false);
             _resultLText.SetActive(true);
-            if (PlayerPrefs.GetInt("Mode") == 1)
+            if (_mode == 1)
             {
                 _fireballsText.SetActive(false);
             }
-            else if (PlayerPrefs.GetInt("Mode") == 2)
+            else if (_mode == 2)
             {
                 _fireballsText.SetActive(true);
+                _fcountText.text = "Casted fireballs: " + _fbs;
             }
         }
     }

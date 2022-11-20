@@ -37,9 +37,14 @@ public class CountdownScript : MonoBehaviour
             }
         }
 
-        if (finishGame)
+        if (finishGame && PlayerPrefs.GetInt("Mode") == 1)
         {
             PlayerPrefs.SetInt("Result", 1);
+            SceneManager.LoadScene("GameOverScene");
+        }
+        else if (finishGame && PlayerPrefs.GetInt("Mode") == 2)
+        {
+            PlayerPrefs.SetInt("Result", 2);
             SceneManager.LoadScene("GameOverScene");
         }
 

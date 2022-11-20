@@ -8,6 +8,7 @@ public class FireballSpawner : MonoBehaviour
     private float y;
     private float xm;
     private float cd;
+    public float cont;
     private float nextFireball;
     private int mode;
     [SerializeField] private Animator _anim;
@@ -35,6 +36,8 @@ public class FireballSpawner : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && mode == 2 && Time.time > nextFireball)
         {
+            cont += 1;
+            PlayerPrefs.SetFloat("FireballCont", cont);
             _sr.enabled = true;
             nextFireball = Time.time + cd;
             Invoke("MouseSpawn", 0);
@@ -47,6 +50,7 @@ public class FireballSpawner : MonoBehaviour
         var rnd = Random.Range(1, 21);
         if (rnd <= 2)
         {
+            cont -= 1;
             Instantiate(_egg, rdmFbSpawn(), Quaternion.identity);
         }
         else
@@ -63,6 +67,7 @@ public class FireballSpawner : MonoBehaviour
 
         if (rnd <= 2)
         {
+            cont -= 1;
             Instantiate(_egg, mouseFbSpawn(), Quaternion.identity);
         }
         else

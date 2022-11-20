@@ -15,7 +15,14 @@ public class DeathScript : MonoBehaviour
     {
         if (collision.CompareTag("Void") || collision.CompareTag("Fireball"))
         {
-            PlayerPrefs.SetInt("Result", 2);
+            if (PlayerPrefs.GetInt("Mode") == 1)
+            {
+                PlayerPrefs.SetInt("Result", 2);
+            } 
+            else if(PlayerPrefs.GetInt("Mode") == 2)
+            {
+                PlayerPrefs.SetInt("Result", 1);
+            } 
             Destroy(gameObject);
             SceneManager.LoadScene("GameOverScene");
         }

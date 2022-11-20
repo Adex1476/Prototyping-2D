@@ -715,6 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameText: {fileID: 1478696975}
+  _fcountText: {fileID: 69170722}
   _resultWText: {fileID: 1052047689}
   _resultLText: {fileID: 169901597}
   _fireballsText: {fileID: 69170720}
