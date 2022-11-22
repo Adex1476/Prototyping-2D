@@ -6,13 +6,9 @@ public class FireballCollision : MonoBehaviour
 {
     [SerializeField]private Animator animator;
     [SerializeField]private Rigidbody2D _rb;
-    private GameObject _player; 
-    private float strength = 16;
+
     // Start is called before the first frame update
-    void Start() 
-    {
-        _player = GameObject.Find("Player");
-    }
+    void Start() {}
 
     // Update is called once per frame
     void Update() { }
@@ -23,8 +19,6 @@ public class FireballCollision : MonoBehaviour
         {
             _rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             Destroy(this.GetComponent<CapsuleCollider2D>());
-            Vector2 dir = (transform.position - _player.transform.position).normalized;
-            _rb.AddForce(dir * strength, ForceMode2D.Impulse);
             animator.SetBool("Impact", true);
             Invoke("Explosion", 1f);
         }
@@ -32,7 +26,6 @@ public class FireballCollision : MonoBehaviour
 
     private void Explosion()
     {
-        _rb.velocity = Vector2.zero;
         Destroy(gameObject);
     }
 }

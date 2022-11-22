@@ -1206,6 +1206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24bd55f0f61dd148b78f441482f4748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cont: 0
   _anim: {fileID: 696727375}
   _sr: {fileID: 696727376}
   _fireball: {fileID: 3629307040425859125, guid: 56e017c465b6c82479e7f2d5b47f0e62, type: 3}
@@ -2462,7 +2463,7 @@ GameObject:
   - component: {fileID: 1942909894}
   - component: {fileID: 1942909893}
   - component: {fileID: 1942909895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}

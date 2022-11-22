@@ -6,7 +6,7 @@ public class PlayerData : MonoBehaviour
 {
     public string PlayerName;
     public PlayerKind PlayerKind;
-    public float Height, Weight = 5f, Speed = 1f, Dist = 8f;
+    public float Height, Weight = 5f, Speed = 1f/*, Dist = 8f*/;
     public Sprite[] animationSprites;
     public float pas { get; set; }
 
