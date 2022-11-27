@@ -5,8 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class DeathScript : MonoBehaviour
 {
+    [SerializeField] private MovementManager _mm;
+    [SerializeField] private Animation anim;
+    private int _mode;
+    public bool isDead;
+
     // Start is called before the first frame update
-    void Start() { }
+    void Start() 
+    {
+        isDead = false;
+        _mode = PlayerPrefs.GetInt("Mode");
+    }
 
     // Update is called once per frame
     void Update() { }
@@ -22,9 +31,18 @@ public class DeathScript : MonoBehaviour
             else if(PlayerPrefs.GetInt("Mode") == 2)
             {
                 PlayerPrefs.SetInt("Result", 1);
-            } 
-            Destroy(gameObject);
-            SceneManager.LoadScene("GameOverScene");
+            }
+            isDead = true;
+            StartCoroutine(Death());
         }
+    }
+
+    IEnumerator Death()
+    {
+        anim.Play();
+        _mm.DisableMovement();
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
+        SceneManager.LoadScene("GameOverScene");
     }
 }

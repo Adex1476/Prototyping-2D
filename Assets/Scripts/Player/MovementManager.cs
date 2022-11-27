@@ -33,4 +33,17 @@ public class MovementManager : MonoBehaviour
         } 
     }
     public enum Mov { Movement, Stop }
+
+    public void DisableMovement()
+    {
+        if (mode == 1)
+        {
+            GetComponent<PlayerMovement>().enabled = false;
+        }
+        else
+        {
+            GetComponent<PlayerAutoMovement>().enabled = false;
+        }
+    }
+
 }

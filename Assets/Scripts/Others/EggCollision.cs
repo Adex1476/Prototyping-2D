@@ -6,6 +6,7 @@ public class EggCollision : MonoBehaviour
 {
     private SpriteRenderer _objRenderer;
     [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,9 @@ public class EggCollision : MonoBehaviour
         }
         if (collision.CompareTag("Player"))
         {
-            Destroy();
+            _rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            animator.SetBool("Break", true);
+            Invoke("Destroy", 1f);
         }
     }
 

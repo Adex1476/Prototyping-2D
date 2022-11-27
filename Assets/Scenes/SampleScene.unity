@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 471401739}
   - component: {fileID: 471401740}
   - component: {fileID: 471401741}
+  - component: {fileID: 471401742}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -657,7 +658,6 @@ MonoBehaviour:
   Height: 1.5
   Weight: 5
   Speed: 1
-  Dist: 9
   animationSprites:
   - {fileID: 21300000, guid: d34d3f71c624d144fb4cd3124afb8eb1, type: 3}
   - {fileID: 21300000, guid: cfda8ef91c347e74abf5a67f91d333e9, type: 3}
@@ -748,6 +748,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd29b8d33247134b8ff5deb5ee5ab7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sr: {fileID: 0}
+  _rb: {fileID: 0}
+  _mm: {fileID: 471401738}
+  anim: {fileID: 471401742}
+  isDead: 0
+--- !u!111 &471401742
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471401728}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6fcf77fed6fdf5749a2c52e767e1e66a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

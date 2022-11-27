@@ -14,11 +14,13 @@ public class PowerUp : MonoBehaviour
     private float Scale;
     private Vector3 Vector = new Vector3(1, 1, 1);
     private bool cantGrow;
+    private DeathScript _ds;
 
     // Start is called before the first frame update
     void Start()
     {
         dataPlayer = GetComponentInParent<PlayerData>();
+        _ds = GetComponent<DeathScript>();
         Size = transform.localScale;
         Scale = dataPlayer.Height / 10;
         maxSize = Size + Vector * Scale;
@@ -56,7 +58,7 @@ public class PowerUp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Egg"))
+        if (collision.CompareTag("Egg") && !_ds.isDead)
         {
             if (cantGrow == false)
             {
