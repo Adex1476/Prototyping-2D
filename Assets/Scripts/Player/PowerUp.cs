@@ -13,15 +13,19 @@ public class PowerUp : MonoBehaviour
     bool increase = false, decrease = false;
     private float Scale;
     private Vector3 Vector = new Vector3(1, 1, 1);
+    private bool cantGrow;
+    private DeathScript _ds;
 
     // Start is called before the first frame update
     void Start()
     {
         dataPlayer = GetComponentInParent<PlayerData>();
+        _ds = GetComponent<DeathScript>();
         Size = transform.localScale;
         Scale = dataPlayer.Height / 10;
         maxSize = Size + Vector * Scale;
         currentStatus = PUstatus.baseF;
+        cantGrow = false;
     }
 
     // Update is called once per frame
@@ -52,22 +56,34 @@ public class PowerUp : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Egg") && !_ds.isDead)
+        {
+            if (cantGrow == false)
+            {
+                currentStatus = PUstatus.grow;
+            }
+        }
+    }
+
     void cd()
     {
         if (cdTime > 0) { cdTime -= Time.deltaTime; }
         else
         {
-            cdTime = 6f;
+            cdTime = 0f;
+            cantGrow = false;
             currentStatus = PUstatus.baseF;
         }
     }
-    void baseF()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) { currentStatus = PUstatus.grow; }
-    }
+
+    void baseF() {}
+
     void grow()
     {
         increase = true;
+        cantGrow = true;
         if (increase)
         {
             transform.localScale += Vector;
@@ -78,15 +94,17 @@ public class PowerUp : MonoBehaviour
             }
         }
     }
+
     void giant()
     {
         if (PUtime > 0) { PUtime -= Time.deltaTime; }
         else
         {
-            PUtime = 6f;
+            PUtime = 3f;
             currentStatus = PUstatus.ungrow;
         }
     }
+
     void ungrow()
     {
         decrease = true;

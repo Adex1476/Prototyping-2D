@@ -7,25 +7,25 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public static string playerName;
-    private Button button;
-    public InputField inpf;
-    private bool created = false;
+    private Button _button;
+    [SerializeField] private InputField _inpf;
+    private bool _created = false;
 
     void Awake()
     {
-        if (created!) { DontDestroyOnLoad(this.gameObject); }
+        if (_created!) { DontDestroyOnLoad(this.gameObject); }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(GoToScene);
+        _button = GetComponent<Button>();
+        _button.onClick.AddListener(GoToScene);
     }
 
     private void GoToScene()
     {
-        if (inpf.text != "")
+        if (_inpf.text != "")
         {
             SceneManager.LoadScene("SampleScene");
         }     

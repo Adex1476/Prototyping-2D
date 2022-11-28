@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DropdownManager : MonoBehaviour
+public class DropdownPlayerKind : MonoBehaviour
 {
     [SerializeField] private TextMeshPro _pk;
     public string pkui;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private MovementManager _mm;
+    private bool canJump;
     private PlayerData _playerData;
     public SpriteRenderer spriteRenderer;
 
@@ -19,19 +20,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
+        Movement();
     }
 
-    void Walk()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if (Input.GetAxis("Horizontal") > 0)
+        if (collision.collider.tag == "Ground") { canJump = true; }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground") { canJump = false; }
+    }
+
+    void Movement()
+    {
+        if (Input.GetAxis("Horizontal") > 0 || Input.GetKey(KeyCode.D))
         {
             spriteRenderer.flipX = true;
             _mm.m = MovementManager.Mov.Movement;
             transform.position = new Vector3(transform.position.x + _playerData.pas, transform.position.y, transform.position.z);
         }
-        else if (Input.GetAxis("Horizontal") < 0)
+        else if (Input.GetAxis("Horizontal") < 0 || Input.GetKey(KeyCode.A))
         {
             spriteRenderer.flipX = false;
             _mm.m = MovementManager.Mov.Movement;
@@ -40,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _mm.m = _mm.m = MovementManager.Mov.Stop;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 800F));
         }
     }
 }
