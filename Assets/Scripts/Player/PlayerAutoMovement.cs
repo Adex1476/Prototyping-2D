@@ -39,7 +39,18 @@ public class PlayerAutoMovement : MonoBehaviour
         if (hitFront.collider == null)
         {
             _mm.m = MovementManager.Mov.Stop;
-            _dir = direction.stop;
+            if (_dir == direction.right)
+            {
+                _dir = direction.left;
+                _mm.m = MovementManager.Mov.Movement;
+                //WalkL();
+            }
+            else if (_dir == direction.left)
+            {
+                _dir = direction.right;
+                _mm.m = MovementManager.Mov.Movement;
+                //WalkR();
+            }
         }  
     }
 
@@ -51,14 +62,14 @@ public class PlayerAutoMovement : MonoBehaviour
     void WalkR()
     {
         _dir = direction.right;
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1000F * Time.deltaTime, 0));
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1F, 0));
         gameObject.GetComponent<SpriteRenderer>().flipX = true;
     }
 
     void WalkL()
     {
         _dir = direction.left;
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1000F * Time.deltaTime, 0));
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1F, 0));
         gameObject.GetComponent<SpriteRenderer>().flipX = false;
     }
 }

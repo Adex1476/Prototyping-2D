@@ -45,5 +45,4 @@ public class MovementManager : MonoBehaviour
             GetComponent<PlayerAutoMovement>().enabled = false;
         }
     }
-
 }
